@@ -1,55 +1,37 @@
-![](https://github.com/xyflow/web/blob/main/assets/codesandbox-header-ts.png?raw=true)
+# Hello World (React + Vite)
 
-# React Flow starter (Vite + TS)
+This is an implementation of the default [Hello World](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) sample extension that demonstrates how to set up and use a [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) + [Webview UI Toolkit](https://github.com/microsoft/vscode-webview-ui-toolkit) webview extension.
 
-We've put together this template to serve as a starting point for folks
-interested in React Flow. You can use this both as a base for your own React
-Flow applications, or for small experiments or bug reports.
+![A screenshot of the sample extension.](./assets/hello-world.png)
 
-**TypeScript not your thing?** We also have a vanilla JavaScript starter template,
-just for you!
+## Documentation
 
-## Getting up and running
+For a deeper dive into how this sample works, read the guides below.
 
-You can get this template without forking/cloning the repo using `degit`:
+- [Extension structure](./docs/extension-structure.md)
+- [Extension commands](./docs/extension-commands.md)
+- [Extension development cycle](./docs/extension-development-cycle.md)
 
-```bash
-npx degit xyflow/vite-react-flow-template your-app-name
-```
-
-The template contains mostly the minimum dependencies to get up and running, but
-also includes eslint and some additional rules to help you write React code that
-is less likely to run into issues:
+## Run The Sample
 
 ```bash
-npm install # or `pnpm install` or `yarn install`
+# Copy sample extension locally
+npx degit microsoft/vscode-webview-ui-toolkit-samples/frameworks/hello-world-react-vite hello-world
+
+# Navigate into sample directory
+cd hello-world
+
+# Install dependencies for both the extension and webview UI source code
+npm run install:all
+
+# Build webview UI source code
+npm run build:webview
+
+# Open sample in VS Code
+code .
 ```
 
-Vite is a great development server and build tool that we recommend our users to
-use. You can start a development server with:
+Once the sample is open inside VS Code you can run the extension by doing the following:
 
-```bash
-npm run dev
-```
-
-While the development server is running, changes you make to the code will be
-automatically reflected in the browser!
-
-## Things to try:
-
-- Create a new custom node inside `src/nodes/` (don't forget to export it from `src/nodes/index.ts`).
-- Change how things look by [overriding some of the built-in classes](https://reactflow.dev/learn/customization/theming#overriding-built-in-classes).
-- Add a layouting library to [position your nodes automatically](https://reactflow.dev/learn/layouting/layouting)
-
-## Resources
-
-Links:
-
-- [React Flow - Docs](https://reactflow.dev)
-- [React Flow - Discord](https://discord.com/invite/Bqt6xrs)
-
-Learn:
-
-- [React Flow – Custom Nodes](https://reactflow.dev/learn/customization/custom-nodes)
-- [React Flow – Layouting](https://reactflow.dev/learn/layouting/layouting)
-# abstraction-first
+1. Press `F5` to open a new Extension Development Host window
+2. Inside the host window, open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and type `Hello World (React + Vite): Show`
